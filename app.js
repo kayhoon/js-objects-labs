@@ -1,23 +1,23 @@
 const pokemon = require('./data.js')
 
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//   }
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+  }
 
 
 //   console.dir(pokemon, { maxArrayLength: null })
@@ -72,14 +72,11 @@ const pokemon = require('./data.js')
 
 // const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
 // game.party.push(electricPokemon)
-// // console.log(electricPokemon)
 
 // const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
-// // console.log(highHpPokemon)
 // game.party.push(highHpPokemon)
 
 // const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
-// // console.log(lowHpPokemon)
 // game.party.push(lowHpPokemon)
 // console.log(game.party)
 
@@ -91,36 +88,66 @@ const pokemon = require('./data.js')
 // 1. Set the `completed` property to true for gyms with a difficulty below 3.
 // 2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
 
-const game = {
-    party: [],
-    gyms: [
-      { location: "Pewter City", completed: false, difficulty: 1 },
-      { location: "Cerulean City", completed: false, difficulty: 2 },
-      { location: "Vermilion City", completed: false, difficulty: 3 },
-      { location: "Celadon City", completed: false, difficulty: 4 },
-      { location: "Fuchsia City", completed: false, difficulty: 5 },
-      { location: "Saffron City", completed: false, difficulty: 6 },
-      { location: "Cinnabar Island", completed: false, difficulty: 7 },
-      { location: "Viridian City", completed: false, difficulty: 8 },
-    ],
-    items: [
-      { name: "potion", quantity: 4 },
-      { name: "pokeball", quantity: 8 },
-      { name: "rare candy", quantity: 99 },
-    ],
-    difficulty: [`Hard`],
-  }
+// const game = {
+//     party: [],
+//     gyms: [
+//       { location: "Pewter City", completed: false, difficulty: 1 },
+//       { location: "Cerulean City", completed: false, difficulty: 2 },
+//       { location: "Vermilion City", completed: false, difficulty: 3 },
+//       { location: "Celadon City", completed: false, difficulty: 4 },
+//       { location: "Fuchsia City", completed: false, difficulty: 5 },
+//       { location: "Saffron City", completed: false, difficulty: 6 },
+//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
+//       { location: "Viridian City", completed: false, difficulty: 8 },
+//     ],
+//     items: [
+//       { name: "potion", quantity: 4 },
+//       { name: "pokeball", quantity: 8 },
+//       { name: "rare candy", quantity: 99 },
+//     ],
+//     difficulty: [`Hard`],
+//   }
 
   
-  game.gyms.forEach(gym => { 
-    if (gym.difficulty < 3) {
-        gym.completed = true;
-    }
+//   game.gyms.forEach(gym => { 
+//     if (gym.difficulty < 3) {
+//         gym.completed = true;
+//     }
     
-  });
+//   });
 
 // Solve Exercise 6 here:
 
+
+// Exercise 7
+// 1. Evolve the starter Pokémon you added to your party earlier. Each starter Pokémon evolves into a specific one.
+// 2. How would you replace the current starter Pokémon in your party with its evolved form?
+
+// Hint: 
+//   - Pokemon 1: Bulbasaur evolves into Pokemon 2: Ivysaur
+//   - Pokemon 4: Charmander evolves into Pokemon 5: Charmeleon
+//   - Pokemon 7: Squirtle evolves into Pokemon 8: Wartortle
+//   - Pokemon 25: Pikachu evolves into Pokemon 26: Raichu
+
+// More Hints: The existing starter Pokemon will be *replaced* in your party with the Pokemon it evolved into. When working with an array of objects, the splice() array method is ideal for replacing one element with another. 
+
+
+// Solve Exercise 7 here:
+const starterPokemon = (pokemon[0])
+game.party.push(starterPokemon)
+
+const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
+game.party.push(electricPokemon)
+
+const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
+game.party.push(highHpPokemon)
+
+const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
+game.party.push(lowHpPokemon)
+
+game.party.splice(0, 1, pokemon[1])
+
+console.log(game.party)
 
 
 
