@@ -61,10 +61,29 @@ const game = {
 const starterPokemon = (pokemon[0])
 game.party.push(starterPokemon)
 
-console.log(game.party)
+// console.log(game.party)
 
 // Solve Exercise 4 here:
 
+
+// Exercise 5
+// 1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+// 2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
+game.party.push(electricPokemon)
+// console.log(electricPokemon)
+
+const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
+// console.log(highHpPokemon)
+game.party.push(highHpPokemon)
+
+const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
+// console.log(lowHpPokemon)
+game.party.push(lowHpPokemon)
+console.log(game.party)
+
+// Solve Exercise 5 here:
 
 
 
