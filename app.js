@@ -129,21 +129,21 @@ const game = {
 
 
 // Solve Exercise 7 here:
-const starterPokemon = (pokemon[0])
-game.party.push(starterPokemon)
+// const starterPokemon = (pokemon[0])
+// game.party.push(starterPokemon)
 
-const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
-game.party.push(electricPokemon)
+// const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
+// game.party.push(electricPokemon)
 
-const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
-game.party.push(highHpPokemon)
+// const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
+// game.party.push(highHpPokemon)
 
-const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
-game.party.push(lowHpPokemon)
+// const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
+// game.party.push(lowHpPokemon)
 
-game.party.splice(0, 1, pokemon[1])
+// game.party.splice(0, 1, pokemon[1])
 
-console.log(game.party)
+// console.log(game.party)
 
 // Exercise 8
 // 1. Print the name of each Pokémon in your party.
@@ -152,6 +152,21 @@ console.log(game.party)
 // Solve Exercise 8 here:
 
 
-for (let pokemon of game.party) {
-    console.log(pokemon.name)
-}
+// for (let pokemon of game.party) {
+//     console.log(pokemon.name)
+// }
+
+
+// Exercise 9
+// 1. Can you print out all the starter Pokémon from the `pokemon` array?
+// 2. Think about how you can identify a starter Pokémon and then log their names.
+
+
+// Solve Exercise 9 here:
+pokemon.forEach (pokemon =>  {
+    if (pokemon.starter === true) {
+        console.log(pokemon)
+    }
+})
+
+
