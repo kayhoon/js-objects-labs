@@ -1,23 +1,23 @@
 const pokemon = require('./data.js')
 
-const game = {
-    party: [],
-    gyms: [
-      { location: "Pewter City", completed: false, difficulty: 1 },
-      { location: "Cerulean City", completed: false, difficulty: 2 },
-      { location: "Vermilion City", completed: false, difficulty: 3 },
-      { location: "Celadon City", completed: false, difficulty: 4 },
-      { location: "Fuchsia City", completed: false, difficulty: 5 },
-      { location: "Saffron City", completed: false, difficulty: 6 },
-      { location: "Cinnabar Island", completed: false, difficulty: 7 },
-      { location: "Viridian City", completed: false, difficulty: 8 },
-    ],
-    items: [
-      { name: "potion", quantity: 4 },
-      { name: "pokeball", quantity: 8 },
-      { name: "rare candy", quantity: 99 },
-    ],
-  }
+// const game = {
+//     party: [],
+//     gyms: [
+//       { location: "Pewter City", completed: false, difficulty: 1 },
+//       { location: "Cerulean City", completed: false, difficulty: 2 },
+//       { location: "Vermilion City", completed: false, difficulty: 3 },
+//       { location: "Celadon City", completed: false, difficulty: 4 },
+//       { location: "Fuchsia City", completed: false, difficulty: 5 },
+//       { location: "Saffron City", completed: false, difficulty: 6 },
+//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
+//       { location: "Viridian City", completed: false, difficulty: 8 },
+//     ],
+//     items: [
+//       { name: "potion", quantity: 4 },
+//       { name: "pokeball", quantity: 8 },
+//       { name: "rare candy", quantity: 99 },
+//     ],
+//   }
 
 
 //   console.dir(pokemon, { maxArrayLength: null })
@@ -58,8 +58,8 @@ const game = {
 // 1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
 // 2. Add this Pokémon to the `game.party` array. Which array method will you use to add them?
 
-const starterPokemon = (pokemon[0])
-game.party.push(starterPokemon)
+// const starterPokemon = (pokemon[0])
+// game.party.push(starterPokemon)
 
 // console.log(game.party)
 
@@ -70,21 +70,56 @@ game.party.push(starterPokemon)
 // 1. Choose three more Pokémon from the `pokemon` array and add them to your party.
 // 2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
 
-const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
-game.party.push(electricPokemon)
-// console.log(electricPokemon)
+// const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
+// game.party.push(electricPokemon)
+// // console.log(electricPokemon)
 
-const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
-// console.log(highHpPokemon)
-game.party.push(highHpPokemon)
+// const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
+// // console.log(highHpPokemon)
+// game.party.push(highHpPokemon)
 
-const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
-// console.log(lowHpPokemon)
-game.party.push(lowHpPokemon)
-console.log(game.party)
+// const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
+// // console.log(lowHpPokemon)
+// game.party.push(lowHpPokemon)
+// console.log(game.party)
 
 // Solve Exercise 5 here:
 
+
+
+// Exercise 6
+// 1. Set the `completed` property to true for gyms with a difficulty below 3.
+// 2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
+
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+  }
+
+  
+  game.gyms.forEach(gym => { 
+    if (gym.difficulty < 3) {
+        gym.completed = true;
+    }
+    
+  });
+
+// Solve Exercise 6 here:
 
 
 
