@@ -217,28 +217,28 @@ const pokemon = require('./data.js')
 
 // Solve Exercise 11 here:
 
-const game = {
-    party: [],
-    gyms: [
-      { location: "Pewter City", completed: false, difficulty: 1 },
-      { location: "Cerulean City", completed: false, difficulty: 2 },
-      { location: "Vermilion City", completed: false, difficulty: 3 },
-      { location: "Celadon City", completed: false, difficulty: 4 },
-      { location: "Fuchsia City", completed: false, difficulty: 5 },
-      { location: "Saffron City", completed: false, difficulty: 6 },
-      { location: "Cinnabar Island", completed: false, difficulty: 7 },
-      { location: "Viridian City", completed: false, difficulty: 8 },
-    ],
-    items: [
-      { name: "potion", quantity: 4 },
-      { name: "pokeball", quantity: 8 },
-      { name: "rare candy", quantity: 99 },
-    ],
-    difficulty: [`Hard`],
-    catchPokemon: function(pokemonObj) {
-        this.party.push(pokemonObj)
-    },
-}
+// const game = {
+//     party: [],
+//     gyms: [
+//       { location: "Pewter City", completed: false, difficulty: 1 },
+//       { location: "Cerulean City", completed: false, difficulty: 2 },
+//       { location: "Vermilion City", completed: false, difficulty: 3 },
+//       { location: "Celadon City", completed: false, difficulty: 4 },
+//       { location: "Fuchsia City", completed: false, difficulty: 5 },
+//       { location: "Saffron City", completed: false, difficulty: 6 },
+//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
+//       { location: "Viridian City", completed: false, difficulty: 8 },
+//     ],
+//     items: [
+//       { name: "potion", quantity: 4 },
+//       { name: "pokeball", quantity: 8 },
+//       { name: "rare candy", quantity: 99 },
+//     ],
+//     difficulty: [`Hard`],
+//     catchPokemon: function(pokemonObj) {
+//         this.party.push(pokemonObj)
+//     },
+// }
 
 
 
@@ -358,4 +358,45 @@ Solve Exercise 14 here:
 
 // console.log(game.partyCount())
 
+
+/*
+Exercise 15
+1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
+(change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 15 here:
+*/
+
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+    catchPokemon: function(pokemonObj) {
+    },
+    partyCount: function() {
+        return this.party.length
+    }
+}
+
+game.gyms.forEach(gym => {
+    if (gym.completed < 8) {
+        gym.completed = true
+    }
+})
+
+console.log(game.gyms)
 
