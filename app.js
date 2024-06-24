@@ -281,29 +281,44 @@ For example, if five gym objects have a value of `true` on their `completed` pro
 Solve Exercise 13 here:
 */
 
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//     difficulty: [`Hard`],
-//     catchPokemon: function(pokemonObj) {
-//         this.party.push(pokemonObj)
-//     }
-// }
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+    catchPokemon: function(pokemonObj) {
+        this.party.push(pokemonObj)
+    },
+    gymStatus: function() {
+        const gymTally = {
+            completed: 0,
+            incomplete: 0,
+        }
+        for (let gym of this.gyms) {
+            if (gym.completed === true) {
+                gymTally.completed++ 
+            }   else {
+                    gymTally.incomplete++;
+                }
+            }
+            console.log(gymTally)
+        }
+    }
 
+    game.gymStatus();
 
 /*
 Exercise 14
@@ -367,38 +382,16 @@ Exercise 15
 Solve Exercise 15 here:
 */
 
-const game = {
-    party: [],
-    gyms: [
-      { location: "Pewter City", completed: false, difficulty: 1 },
-      { location: "Cerulean City", completed: false, difficulty: 2 },
-      { location: "Vermilion City", completed: false, difficulty: 3 },
-      { location: "Celadon City", completed: false, difficulty: 4 },
-      { location: "Fuchsia City", completed: false, difficulty: 5 },
-      { location: "Saffron City", completed: false, difficulty: 6 },
-      { location: "Cinnabar Island", completed: false, difficulty: 7 },
-      { location: "Viridian City", completed: false, difficulty: 8 },
-    ],
-    items: [
-      { name: "potion", quantity: 4 },
-      { name: "pokeball", quantity: 8 },
-      { name: "rare candy", quantity: 99 },
-    ],
-    difficulty: [`Hard`],
-    catchPokemon: function(pokemonObj) {
-    },
-    partyCount: function() {
-        return this.party.length
-    }
-}
-
 game.gyms.forEach(gym => {
     if (gym.completed < 8) {
         gym.completed = true
     }
 })
 
-console.log(game.gyms)
+console.log(gymTally)
+
+game.gymStatus();
+// console.log(game.gyms)
 
 /*
 Exercise 16
@@ -408,5 +401,5 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
-console.log(game)
+// console.log(game)
 
