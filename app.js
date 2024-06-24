@@ -312,13 +312,14 @@ const game = {
                 gymTally.completed++ 
             }   else {
                     gymTally.incomplete++;
-                }
+                }    
+                console.log(gymTally)
             }
-            console.log(gymTally)
+        
         }
     }
+ game.gymStatus();
 
-    game.gymStatus();
 
 /*
 Exercise 14
@@ -388,9 +389,9 @@ game.gyms.forEach(gym => {
     }
 })
 
-console.log(gymTally)
+// console.log(gymTally)
 
-game.gymStatus();
+// game.gymStatus();
 // console.log(game.gyms)
 
 /*
