@@ -1,29 +1,29 @@
 const pokemon = require('./data.js')
 
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//   }
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+  }
 
 
-//   console.dir(pokemon, { maxArrayLength: null })
-// console.log(pokemon[24])
+  console.dir(pokemon, { maxArrayLength: null })
+console.log(pokemon[24])
 
-// console.log(game)
+console.log(game)
 
 
 
@@ -33,25 +33,25 @@ const pokemon = require('./data.js')
 
 // Solve Exercise 3 here:
 
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//     difficulty: [`Hard`],
-//   }
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+  }
 
 
 // Exercise 4
@@ -60,10 +60,10 @@ const pokemon = require('./data.js')
 
 // Solve Exercise 4 here:
 
-// const starterPokemon = (pokemon[0])
-// game.party.push(starterPokemon)
+const starterPokemon = (pokemon[0])
+game.party.push(starterPokemon)
 
-// console.log(game.party)
+console.log(game.party)
 
 
 // Exercise 5
@@ -72,48 +72,48 @@ const pokemon = require('./data.js')
 
 // Solve Exercise 5 here:
 
-// const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
-// game.party.push(electricPokemon)
+const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
+game.party.push(electricPokemon)
 
-// const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
-// game.party.push(highHpPokemon)
+const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
+game.party.push(highHpPokemon)
 
-// const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
-// game.party.push(lowHpPokemon)
-// console.log(game.party)
+const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
+game.party.push(lowHpPokemon)
+console.log(game.party)
 
 // Exercise 6
 // 1. Set the `completed` property to true for gyms with a difficulty below 3.
 // 2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
 
 // Solve Exercise 6 here:
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//     difficulty: [`Hard`],
-//   }
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+  }
 
   
-//   game.gyms.forEach(gym => { 
-//     if (gym.difficulty < 3) {
-//         gym.completed = true;
-//     }
+  game.gyms.forEach(gym => { 
+    if (gym.difficulty < 3) {
+        gym.completed = true;
+    }
     
-//   });
+  });
 
 // Exercise 7
 // 1. Evolve the starter Pokémon you added to your party earlier. Each starter Pokémon evolves into a specific one.
@@ -129,21 +129,21 @@ const pokemon = require('./data.js')
 
 
 // Solve Exercise 7 here:
-// const starterPokemon = (pokemon[0])
-// game.party.push(starterPokemon)
+const starterPokemon = (pokemon[0])
+game.party.push(starterPokemon)
 
-// const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
-// game.party.push(electricPokemon)
+const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
+game.party.push(electricPokemon)
 
-// const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
-// game.party.push(highHpPokemon)
+const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
+game.party.push(highHpPokemon)
 
-// const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
-// game.party.push(lowHpPokemon)
+const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
+game.party.push(lowHpPokemon)
 
-// game.party.splice(0, 1, pokemon[1])
+game.party.splice(0, 1, pokemon[1])
 
-// console.log(game.party)
+console.log(game.party)
 
 // Exercise 8
 // 1. Print the name of each Pokémon in your party.
@@ -152,9 +152,9 @@ const pokemon = require('./data.js')
 // Solve Exercise 8 here:
 
 
-// for (let pokemon of game.party) {
-//     console.log(pokemon.name)
-// }
+for (let pokemon of game.party) {
+    console.log(pokemon.name)
+}
 
 
 // Exercise 9
@@ -180,31 +180,31 @@ const pokemon = require('./data.js')
 
 // Solve Exercise 10 here:
 
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//     difficulty: [`Hard`],
-//     catchPokemon: function(pokemonObj) {
-//         this.party.push(pokemonObj)
-//     }
-// }
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+    catchPokemon: function(pokemonObj) {
+        this.party.push(pokemonObj)
+    }
+}
 
-// game.catchPokemon(pokemon[134])
-// console.log(game.party)
+game.catchPokemon(pokemon[134])
+console.log(game.party)
 
 // Exercise 11
 // 1. Copy the `catchPokemon` method that you just wrote above, and paste it below. Modify it so that it also decreases the number of pokeballs in your inventory each time you catch a Pokémon.
@@ -217,30 +217,28 @@ const pokemon = require('./data.js')
 
 // Solve Exercise 11 here:
 
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//     difficulty: [`Hard`],
-//     catchPokemon: function(pokemonObj) {
-//         this.party.push(pokemonObj)
-//     },
-// }
-
-
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+    catchPokemon: function(pokemonObj) {
+        this.party.push(pokemonObj)
+    },
+}
 
 /*
 Exercise 12
@@ -250,11 +248,11 @@ Exercise 12
 Solve Exercise 12 here:
 */
 
-// game.gyms.forEach( gym => {
-//     if (gym.difficulty < 6) {
-//         gym.completed = true
-//     }
-// })
+game.gyms.forEach( gym => {
+    if (gym.difficulty < 6) {
+        gym.completed = true
+    }
+})
 
 // console.log(game.gyms)
 
@@ -333,46 +331,46 @@ This method should:
 Solve Exercise 14 here:
 */
 
-// const game = {
-//     party: [],
-//     gyms: [
-//       { location: "Pewter City", completed: false, difficulty: 1 },
-//       { location: "Cerulean City", completed: false, difficulty: 2 },
-//       { location: "Vermilion City", completed: false, difficulty: 3 },
-//       { location: "Celadon City", completed: false, difficulty: 4 },
-//       { location: "Fuchsia City", completed: false, difficulty: 5 },
-//       { location: "Saffron City", completed: false, difficulty: 6 },
-//       { location: "Cinnabar Island", completed: false, difficulty: 7 },
-//       { location: "Viridian City", completed: false, difficulty: 8 },
-//     ],
-//     items: [
-//       { name: "potion", quantity: 4 },
-//       { name: "pokeball", quantity: 8 },
-//       { name: "rare candy", quantity: 99 },
-//     ],
-//     difficulty: [`Hard`],
-//     catchPokemon: function(pokemonObj) {
-//     },
-//     partyCount: function() {
-//         return this.party.length
-//     }
-// }
+const game = {
+    party: [],
+    gyms: [
+      { location: "Pewter City", completed: false, difficulty: 1 },
+      { location: "Cerulean City", completed: false, difficulty: 2 },
+      { location: "Vermilion City", completed: false, difficulty: 3 },
+      { location: "Celadon City", completed: false, difficulty: 4 },
+      { location: "Fuchsia City", completed: false, difficulty: 5 },
+      { location: "Saffron City", completed: false, difficulty: 6 },
+      { location: "Cinnabar Island", completed: false, difficulty: 7 },
+      { location: "Viridian City", completed: false, difficulty: 8 },
+    ],
+    items: [
+      { name: "potion", quantity: 4 },
+      { name: "pokeball", quantity: 8 },
+      { name: "rare candy", quantity: 99 },
+    ],
+    difficulty: [`Hard`],
+    catchPokemon: function(pokemonObj) {
+    },
+    partyCount: function() {
+        return this.party.length
+    }
+}
 
-// const starterPokemon = (pokemon[0])
-// game.party.push(starterPokemon)
+const starterPokemon = (pokemon[0])
+game.party.push(starterPokemon)
 
-// const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
-// game.party.push(electricPokemon)
+const electricPokemon = pokemon.find(pokemon => pokemon.type === `electric`)
+game.party.push(electricPokemon)
 
-// const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
-// game.party.push(highHpPokemon)
+const highHpPokemon = pokemon.find(pokemon => pokemon.hp === 106)
+game.party.push(highHpPokemon)
 
-// const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
-// game.party.push(lowHpPokemon)
+const lowHpPokemon = pokemon.find(pokemon => pokemon.hp <= 30)
+game.party.push(lowHpPokemon)
 
-// game.party.splice(0, 1, pokemon[1])
+game.party.splice(0, 1, pokemon[1])
 
-// console.log(game.partyCount())
+console.log(game.partyCount())
 
 
 /*
@@ -389,10 +387,6 @@ game.gyms.forEach(gym => {
     }
 })
 
-// console.log(gymTally)
-
-// game.gymStatus();
-// console.log(game.gyms)
 
 /*
 Exercise 16
@@ -402,5 +396,5 @@ Exercise 16
 Solve Exercise 16 here:
 */
 
-// console.log(game)
+console.log(game)
 
